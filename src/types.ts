@@ -10,3 +10,9 @@ export interface GeneratedWallets {
   ethWallet: Wallet;
   polygonWallet: Wallet;
 }
+
+export interface GetTransactionsInputs {
+  address: string;
+  pageSize?: number;
+  offset?: number;
+}
