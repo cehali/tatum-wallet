@@ -26,12 +26,12 @@ export class WalletService {
       blockchain,
       true,
       generatedWallet.mnemonic,
-      0,
+      0
     );
     const firstAddress = generateAddressFromPrivatekey(
       blockchain,
       true,
-      firstPrivateKey,
+      firstPrivateKey
     );
     return {
       xpub: generatedWallet.xpub,

@@ -13,7 +13,7 @@ export class TransactionService {
     const ethTransactions = await ethGetAccountTransactions(
       address,
       pageSize,
-      offset,
+      offset
     );
     return {
       ethTransactions,

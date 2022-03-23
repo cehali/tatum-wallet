@@ -12,7 +12,7 @@ describe('SubscriptionController', () => {
     }).compile();
 
     subscriptionController = app.get<SubscriptionController>(
-      SubscriptionController,
+      SubscriptionController
     );
   });
 

@@ -10,7 +10,7 @@ export class TransactionController {
   getTransactionsList(
     @Param() address: string,
     @Param() pageSize: number,
-    @Param() offset: number,
+    @Param() offset: number
   ) {
     return this.transactionService.getTransactionsListByAddress({
       address,

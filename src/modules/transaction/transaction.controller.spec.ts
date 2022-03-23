@@ -12,7 +12,7 @@ describe('TransactionController', () => {
     }).compile();
 
     transactionController = app.get<TransactionController>(
-      TransactionController,
+      TransactionController
     );
   });
 

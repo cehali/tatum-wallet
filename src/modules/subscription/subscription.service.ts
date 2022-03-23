@@ -18,17 +18,17 @@ export class SubscriptionService {
     const celoSubscriptionId = await this.createSubscriptionViaSDK(
       Currency.CELO,
       address,
-      webhookUrl,
+      webhookUrl
     );
     const ethSubscriptionId = await this.createSubscriptionViaSDK(
       Currency.ETH,
       address,
-      webhookUrl,
+      webhookUrl
     );
     const polygonSubscriptionId = await this.createSubscriptionViaSDK(
       Currency.MATIC,
       address,
-      webhookUrl,
+      webhookUrl
     );
     return {
       celoSubscriptionId,
@@ -40,7 +40,7 @@ export class SubscriptionService {
   async createSubscriptionViaSDK(
     blockchain: Currency,
     address: string,
-    webhookUrl: string,
+    webhookUrl: string
   ) {
     const data: CreateSubscription = {
       type: SubscriptionType.ADDRESS_TRANSACTION,
