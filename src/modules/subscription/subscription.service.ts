@@ -8,32 +8,32 @@ import {
 
 @Injectable()
 export class SubscriptionService {
-  async createSubscriptions({
+  async createSubscription({
     address,
     webhookUrl,
   }: {
     address: string;
     webhookUrl: string;
   }) {
-    const celoSubscriptionId = await this.createSubscriptionViaSDK(
+    const celoSubscription = await this.createSubscriptionViaSDK(
       Currency.CELO,
       address,
       webhookUrl
     );
-    const ethSubscriptionId = await this.createSubscriptionViaSDK(
+    const ethSubscription = await this.createSubscriptionViaSDK(
       Currency.ETH,
       address,
       webhookUrl
     );
-    const polygonSubscriptionId = await this.createSubscriptionViaSDK(
+    const polygonSubscription = await this.createSubscriptionViaSDK(
       Currency.MATIC,
       address,
       webhookUrl
     );
     return {
-      celoSubscriptionId,
-      ethSubscriptionId,
-      polygonSubscriptionId,
+      celoSubscriptionId: celoSubscription.id,
+      ethSubscriptionId: ethSubscription.id,
+      polygonSubscriptionId: polygonSubscription.id,
     };
   }
 

@@ -16,3 +16,9 @@ export interface GetTransactionsInputs {
   pageSize?: number;
   offset?: number;
 }
+
+export interface Subscriptions {
+  celoSubscriptionId: string;
+  ethSubscriptionId: string;
+  polygonSubscriptionId: string;
+}
