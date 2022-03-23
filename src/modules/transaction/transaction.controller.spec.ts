@@ -17,7 +17,7 @@ describe('TransactionController', () => {
     );
   });
 
-  describe('transaction', () => {
+  describe('controller', () => {
     it('should be defined', () => {
       expect(transactionController).toBeDefined();
     });

@@ -14,7 +14,7 @@ describe('WalletController', () => {
     walletController = app.get<WalletController>(WalletController);
   });
 
-  describe('wallet', () => {
+  describe('controller', () => {
     it('should be defined', () => {
       expect(walletController).toBeDefined();
     });

@@ -18,7 +18,7 @@ describe('SubscriptionController', () => {
     );
   });
 
-  describe('subscription', () => {
+  describe('controller', () => {
     it('should be defined', () => {
       expect(subscriptionController).toBeDefined();
     });
