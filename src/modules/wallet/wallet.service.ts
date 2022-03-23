@@ -4,7 +4,7 @@ import {
   Currency,
   Wallet,
   generatePrivateKeyFromMnemonic,
-  generateAddressFromPrivatekey,
+  generateAddressFromXPub,
 } from '@tatumio/tatum';
 
 @Injectable()
@@ -28,10 +28,11 @@ export class WalletService {
       generatedWallet.mnemonic,
       0
     );
-    const firstAddress = generateAddressFromPrivatekey(
+    const firstAddress = generateAddressFromXPub(
       blockchain,
       true,
-      firstPrivateKey
+      generatedWallet.xpub,
+      0
     );
     return {
       xpub: generatedWallet.xpub,
