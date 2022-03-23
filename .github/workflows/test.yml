@@ -3,7 +3,6 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-  
     steps:
     - uses: actions/checkout@v3
     - name: Install
@@ -13,4 +12,4 @@ jobs:
     - name: Build
       run: npm run build
     - name: Test
-      run: yarn test
+      run: npm run test
