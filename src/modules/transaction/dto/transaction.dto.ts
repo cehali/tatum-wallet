@@ -3,9 +3,6 @@ import { IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class TransactionDto {
   @IsString()
-  address: string;
-
-  @IsString()
   blockchain: Currency;
 
   @IsString()

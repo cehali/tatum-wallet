@@ -7,17 +7,15 @@ import { TransactionDto } from './dto/transaction.dto';
 export class TransactionService {
   async getTransactionsListByAddress({
     address,
-    pageSize,
-    offset,
+    pageSize = 10,
+    offset = 0,
   }: GetTransactionsInputs) {
     const ethTransactions = await ethGetAccountTransactions(
       address,
       pageSize,
       offset
     );
-    return {
-      ethTransactions,
-    };
+    return ethTransactions;
   }
 
   async sendTransaction({
@@ -25,12 +23,13 @@ export class TransactionService {
     privateKey,
     erc20TokenAddress,
     amount,
-    digits = 10,
+    digits,
     to,
   }: TransactionDto) {
-    sendTransaction(true, blockchain, {
+    return sendTransaction(true, blockchain, {
       fromPrivateKey: privateKey,
       contractAddress: erc20TokenAddress,
+      currency: blockchain,
       digits,
       amount,
       to,
